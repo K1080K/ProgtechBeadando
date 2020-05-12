@@ -1,0 +1,4 @@
+The program is a basic role playing game generator under conctruction. It is generating the characters, handling the fights and able to use equipment system.
+I was using singleton for the arrayList, strategy for the combat stances, decorator for the equipment. All GOF and SOLID rules were carefully watched and not violated 
+except one overwrite for the easier sorting of an array.
+I made a unit test for checking an implemented caste's attributes.
