@@ -1,0 +1,24 @@
+A tulajdonságokért felelős mappa feladata függvényei segítségével beállítani egy karakter főjellemzőit.
+
+1) Attributes:
+   A legfelső szinten található file 7 mezője egy egy tulajdonságot takar. A 8. mező egy objektum összetétellel
+kapcsolja rá a file-t az alacsonyabb szinteken található függvényekhez. A mezőkhöz tartozó property-k és
+a konstruktor a további tartalma.
+
+2) Summarized Attribute Modifiers:
+   A file egyetlen feladata, hogy összesíti egy adott főjellemzőhöz tartozó faji és a korból fakadó módosítókat,
+majd továbbítja azokat a gyártók felé. Mindegyik főjellemzőhöz külön függvény van. 2 mezője a faji és a kor
+módosítók bekapcsolása objektum összetétellel.
+
+3.a) Racial Attribute Modifiers:
+   A választott faj módosíthat bizonyos főjellemzőket. Függvényei megnézik milyen fajú az illető és annak megfelelő
+értéket küldenek tovább a felsőbb szintre.
+
+3.b) Age Attribute Modifiers:
+   A karakter életkora is módosíthatja főjellemzőit, általában minél idősebb valaki, annál gyengébbek az értékei.
+Függvényei egy életkor kategóriát várnak, mely segítségével megállapítják az esetleges módosító értékét.
+Mezője a korkategóriákért felelős osztályt rögzíti.
+
+4.) Age Cathegory Definer:
+   Első függvénye megnézi a karakter faját, majd annak megfelelően meghívja a másodlagos függvények valamelyikét,
+mely a fajból és a korból visszaadja, hogy mely kategóriába esik az illető.

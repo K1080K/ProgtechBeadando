@@ -1,0 +1,17 @@
+A mappa a harcért, annak lebonyolításáért felel. A különböző támadási módokat Strategy Pattern segítségével
+valósítottam meg.
+
+1.a) Combat Strategy:
+   A fájl az absztrakt őse a konkrét stratégiáknak, benne az absztrakt metódusokkal, melyeket majd másként kívánunk
+használni.
+
+1.b) Strategy Decider:
+   Ez az osztály teszi lehetővé a stratégiák váltását, itt dől el melyik kerül kijátszásra, objektum összetétel
+segítségével kapcsoljuk bele az absztrakt őst.
+
+2) A konkrét stratégiák, jelenleg 3 db. Itt kerülnek kidolgozásra a módosítani kívánt függvények a reájuk
+jellemző adatokkal.
+
+
+
+A mappa tartalmaz még egy Fight Generator osztályt is, ez függvényei segítségével lebonyolítja a harcot.

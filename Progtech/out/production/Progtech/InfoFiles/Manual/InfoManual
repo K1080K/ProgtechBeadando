@@ -1,0 +1,2 @@
+A könyvtár egy toString metódushoz hasonló, azt kiváltó fájlba szedi össze 1 függvényben az összes alapadatot,
+egy másikban pedig a harci értékeket.

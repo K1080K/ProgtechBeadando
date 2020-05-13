@@ -1,5 +1,10 @@
+import Creatures.Castes.*;
+import Creatures.Enemies.*;
+import DAO.CreatureDAO;
+import Equipments.*;
 import Exceptions.InvalidAgeException;
 import Exceptions.InvalidAttributeException;
+import Fight.*;
 
 public class Main {
 

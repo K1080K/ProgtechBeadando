@@ -1,0 +1,2 @@
+A mappa egyszerű nem kaszt bonyolultságú tucatellenfelek tárolására szolgál.
+Jelenleg 4 különböző ellenség van implementálva. Minden fájl az ősosztálytól lefele egy gyártásáért felelős.

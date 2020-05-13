@@ -1,0 +1,24 @@
+A felszerelés elkészítéséhez a Decorator tervezési mintát választottam.
+
+1) IEquipment:
+   Az interface létrehozza a funkciókat, majd továbbadja azokat kidolgozásra az alsóbb szintek irányába.
+
+2.a) Equipment:
+   Egy konkrét felszerelés osztály, amit majd diszíteni kivánunk a későbbiekben.
+
+2.b) Equipment Decorator:
+   A kapcsoló absztrakt dekorátor osztály, amin keresztül a különböző új tulajdonságokat hozzáadjuk a konkrét
+létrehozni kívánt felszereléshez, vagy a régieket módosíthatjuk.
+
+3) A segédmappákban található fájlok a diszítőelemek, melyekből akár több összekapcsolásával is a konkrét tárgyaink
+elkészülhetnek.
+
+
+A mappában található még egy osztály, ami a elkészíti a konkrét kívánt felszereléseket és felpakolja azokat a karakterekre.
+
+1) Equipment Generator:
+   A fájl egy függvényt tartalmaz, mely adatokat kér be a felhasználótól, mely segítségével legyárthatóvá válik a kívánt
+felszerelés, majd "ráadja" azt a karakterre. Egyetlen mezője egy objektum összetétel.
+
+2) Weapon Creator:
+   Az osztály feladata, hogy a beérkező string kódból legyártson egy fegyvert.

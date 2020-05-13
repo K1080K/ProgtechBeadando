@@ -1,0 +1,3 @@
+A játékba implementált fegyverek gyűjteménye. Innen átadásra kerülnek az értékek a decoratornak, egyenlőre a
+képzetlen fegyverhasználatnak megfelelő értékekkel. (lásd SkillModifiers)
+A fegyver neve, súlya és ára is itt kerül be.

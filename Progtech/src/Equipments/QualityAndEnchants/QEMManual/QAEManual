@@ -1,0 +1,2 @@
+A játékba implementált extra minőség rontó, vagy javító dolgok gyűjtője.
+A javított, vagy rontott értékek átadásra kerülnek a decorator számára.

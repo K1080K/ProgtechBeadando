@@ -1,0 +1,7 @@
+A lények 3 szinten keresztül gyártódnak.
+Az első szint a Creature osztály, mely az alapvető, nélkülözhetetlen információkat tárolja, melyre szüksége lehet
+akár a legegyszerűbb generált lénynek is.
+A második szinten a rendszer kettéválik egy bonyolultabb, a karakterek számára további fontos tulajdonságokkal felszerelt
+Characters, valamint egy a szimpla ellenségek irányába mutató Bestiary absztrakt osztályokra.
+A harmadik szinten történik maga a példányosítás, itt konkrét karakter osztályokat(pl: harcos, bárd), vagy konkrét
+ellenségeket(pl: farkas) lehet létrehozni.

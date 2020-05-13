@@ -1,0 +1,15 @@
+A mappa feladata a karakter harci pontjainak(kezdeményezés, támadás, védekezés) és élettartalékának(életerő, fájdalomtűrés)
+megalkotása.
+
+1.a) Combat Points:
+   A karakter harci értékeit tárolja. Propery-k és konstruktor tartozik hozzá, valamint egy mezőn keresztül(cpm)
+kapcsolja a főjellemzőkből fakadó módosítókat.
+
+2.a) Combat Point Modifiers:
+   Függvényei segítségével a főjellemzőkből eredő módosítókat adja vissza a harci értékekhez.
+
+1.b) Health And Pain Resistance:
+   Az életerőt és a fájdalomtűrést tárolja, hrm mezőjén keresztül kapcsolódik az ezeket befolyásoló függvényekhez.
+
+2.b) Health And Pain Resistance Modifiers:
+   A főjellemzőknek megfelelően módosítják függvényei az életerőt és a fájdalomtűrést.

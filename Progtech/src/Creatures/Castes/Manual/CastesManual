@@ -1,0 +1,3 @@
+A mappa tartalma a jelenleg implementált karakter kasztokat generáló fájlok. Minden fájlhoz rendelve vala egy
+Level fájl, mely a generálás során hozzáadja a szintmódosítót a fájdalomtűréshez és a harcértékekhez.
+2 enum is van benne, melyből a fajt és a kasztot nyerhetjük ki, hogy dolgozhassunk vele.
