@@ -12,8 +12,11 @@ public class EquipmentGenerator {
     public void EquipWeapon(ArrayList<Creature> creatures) {
         for(Creature c : creatures) {
             if(c.getPartyMember() == true) {
-                System.out.println(c.getName() + " what weapon would you like to use?\n1)Longsword   2)Knight sword");
+                System.out.println(c.getName() + " what weapon would you like to use?\n1)Longsword   2)Knight sword   3)Battle axe   4)Short sword   5)Sabre\n " +
+                        "6)Headhunter sword   7)Slan sword   8)Pickaxe   9)Flail");
                 Scanner sc = new Scanner(System.in);
+
+
                 int aa = sc.nextInt();
                 System.out.println("What is your skill level for the selected weapon?\n1)No skill   2)Basic skill   3)Master skill");
                 int bb = sc.nextInt();

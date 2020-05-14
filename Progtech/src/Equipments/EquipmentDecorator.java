@@ -19,6 +19,9 @@ public abstract class EquipmentDecorator implements IEquipment {
     }
 
     @Override
+    public int Price() { return ieqp.Price(); }
+
+    @Override
     public int DamageIndex() {
         return ieqp.DamageIndex();
     }

@@ -18,8 +18,8 @@ public class Knight extends Character {
     //region This constructor is creating a knight from the required information
 
 
-    public Knight(String name, int gold, boolean party_member, boolean alive, int age, Race race, Caste caste, int level) throws InvalidAgeException, InvalidAttributeException {
-        super(name, gold, party_member, alive, age, race, caste, level);
+    public Knight(String name, boolean party_member, boolean alive, int age, Race race, Caste caste, int level) throws InvalidAgeException, InvalidAttributeException {
+        super(name, party_member, alive, age, race, caste, level);
         this.kl = new KnightLevel();
         this.getAttributes().setStrength(roll.Rolld6plus12() + getAttributes().getSumm().StrengthModifier(race, age));
         this.getAttributes().setDexterity(roll.Roll3d6x2() + getAttributes().getSumm().DexterityModifier(race, age));

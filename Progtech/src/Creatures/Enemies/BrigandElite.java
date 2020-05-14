@@ -6,8 +6,8 @@ public class BrigandElite extends Bestiary {
 
     DiceRolls roll = new DiceRolls();
 
-    public BrigandElite(String name, int gold, boolean party_member, boolean alive) {
-        super(name, gold, party_member, alive);
+    public BrigandElite(String name, boolean party_member, boolean alive) {
+        super(name, party_member, alive);
         this.getHealth_andPainResistance().setHealth_points(7);
         this.getHealth_andPainResistance().setActual_health_points(getHealth_andPainResistance().getHealth_points());
         this.getHealth_andPainResistance().setPain_resistance_points(10);

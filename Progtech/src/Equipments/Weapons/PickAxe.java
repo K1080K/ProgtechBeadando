@@ -3,28 +3,28 @@ package Equipments.Weapons;
 import Equipments.EquipmentDecorator;
 import Equipments.IEquipment;
 
-public class BattleAxe extends EquipmentDecorator {
+public class PickAxe extends EquipmentDecorator {
 
-    public BattleAxe(IEquipment ieqp) {
+    public PickAxe(IEquipment ieqp) {
         super(ieqp);
     }
 
     public String EquipmentName() {
-        return super.EquipmentName() + DecorateWithBattleAxe();
+        return super.EquipmentName() + DecorateWithPickAxe();
     }
-    private String DecorateWithBattleAxe() {
-        return "Battle axe";
+    private String DecorateWithPickAxe() {
+        return "Pickaxe";
     }
 
     public double Weight() {
         return super.Weight() + DecorateWithWeight();
     }
     private double DecorateWithWeight() {
-        return 2;
+        return 2.5;
     }
 
     public int Price() { return  super.Price() + DecorateWithPrice(); }
-    private int DecorateWithPrice() { return 600; }
+    private int DecorateWithPrice() { return 800; }
 
     public int DamageIndex() {
         return super.DamageIndex() + DecorateWithDamage();
@@ -32,11 +32,11 @@ public class BattleAxe extends EquipmentDecorator {
     private int DecorateWithDamage() { return 1; }
 
     public int ModifyOnAP() { return super.ModifyOnAP() + DecorateWithAP(); }
-    private int DecorateWithAP() { return -13; }
+    private int DecorateWithAP() { return -14; }
 
     public int ModifyOnIP() { return super.ModifyOnIP() + DecorateWithIP(); }
     private int DecorateWithIP() { return -5; }
 
     public int ModifyOnDP() { return super.ModifyOnDP() + DecorateWithDP(); }
-    private int DecorateWithDP() { return -9; }
+    private int DecorateWithDP() { return -12; }
 }

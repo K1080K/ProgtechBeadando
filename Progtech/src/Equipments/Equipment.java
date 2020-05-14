@@ -13,6 +13,9 @@ public class Equipment implements IEquipment {
     }
 
     @Override
+    public int Price() { return 0; }
+
+    @Override
     public int DamageIndex() {
         return 0;
     }

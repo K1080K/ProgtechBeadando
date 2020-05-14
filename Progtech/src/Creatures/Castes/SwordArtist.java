@@ -18,8 +18,8 @@ public class SwordArtist extends Character {
     //region This constructor is creating a sword artist from the required information
 
 
-    public SwordArtist(String name, int gold, boolean party_member, boolean alive, int age, Race race, Caste caste, int level) throws InvalidAgeException, InvalidAttributeException {
-        super(name, gold, party_member, alive, age, race, caste, level);
+    public SwordArtist(String name, boolean party_member, boolean alive, int age, Race race, Caste caste, int level) throws InvalidAgeException, InvalidAttributeException {
+        super(name, party_member, alive, age, race, caste, level);
         this.sl = new SwordArtistLevel();
         this.getAttributes().setStrength(roll.Rolld10plus8() + getAttributes().getSumm().StrengthModifier(race, age));
         this.getAttributes().setDexterity(roll.Rolld6plus12() + 2 + getAttributes().getSumm().DexterityModifier(race, age));

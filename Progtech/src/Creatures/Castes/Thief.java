@@ -18,8 +18,8 @@ public class Thief extends Character {
     //region This constructor is creating a thief from the required information
 
 
-    public Thief(String name, int gold, boolean party_member, boolean alive, int age, Race race, Caste caste, int level) throws InvalidAgeException, InvalidAttributeException {
-        super(name, gold, party_member, alive, age, race, caste, level);
+    public Thief(String name, boolean party_member, boolean alive, int age, Race race, Caste caste, int level) throws InvalidAgeException, InvalidAttributeException {
+        super(name, party_member, alive, age, race, caste, level);
         this.tl = new ThiefLevel();
         this.getAttributes().setStrength(roll.Roll3d6x2() + getAttributes().getSumm().StrengthModifier(race, age));
         this.getAttributes().setDexterity(roll.Rolld6plus12() + getAttributes().getSumm().DexterityModifier(race, age));
