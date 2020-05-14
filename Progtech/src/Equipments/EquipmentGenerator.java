@@ -15,13 +15,11 @@ public class EquipmentGenerator {
                 System.out.println(c.getName() + " what weapon would you like to use?\n1)Longsword   2)Knight sword   3)Battle axe   4)Short sword   5)Sabre\n " +
                         "6)Headhunter sword   7)Slan sword   8)Pickaxe   9)Flail");
                 Scanner sc = new Scanner(System.in);
-
-
-                int aa = sc.nextInt();
+                int aa = tryParse(sc,1, 9);
                 System.out.println("What is your skill level for the selected weapon?\n1)No skill   2)Basic skill   3)Master skill");
-                int bb = sc.nextInt();
+                int bb = tryParse(sc,1, 3);
                 System.out.println("Is the weapon magically modified?\n1)No   2)Blessed");
-                int dd = sc.nextInt();
+                int dd = tryParse(sc,1, 2);
                 String a = String.valueOf(aa);
                 String b = String.valueOf(bb);
                 String d = String.valueOf(dd);
@@ -34,5 +32,30 @@ public class EquipmentGenerator {
                 c.getCombat_points().setWeapon_index(weapon.DamageIndex());
             }
         }
+    }
+
+    public boolean tryParseInt(String value) {
+        try {
+            Integer.parseInt(value);
+            return true;
+        } catch (NumberFormatException e) {
+            return false;
+        }
+    }
+
+    public int tryParse(Scanner sc, int min, int max){
+
+        String s;
+        int retVal;
+
+        do{
+            s = sc.nextLine();
+            if (tryParseInt(s)){
+                retVal = Integer.parseInt(s);
+                if (min <= retVal && retVal <=  max){
+                    return retVal;
+                }
+            }
+        }while (true);
     }
 }

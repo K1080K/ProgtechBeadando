@@ -108,4 +108,9 @@ public abstract class Creature implements Comparable {
         int newAttack = this.getCombat_points().getAttack_Point() + weapon_attack;
         this.combat_points.setEquip_attack_point(newAttack);
     }
+
+    public void SetStrategy(StrategyDecider decider) {
+        StrategyDecider newStrategy = decider;
+        this.setDecider(newStrategy);
+    }
 }

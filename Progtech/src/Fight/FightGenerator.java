@@ -55,7 +55,7 @@ public class FightGenerator {
             if(c.getPartyMember() == true && c.getAlive() == true) {
                 System.out.println(c.getName() + " please choose your strategy for the turn!\n1. Attack   2. Charge   3. Defending");
                 Scanner sc = new Scanner(System.in);
-                int a = sc.nextInt();
+                int a = tryParse(sc, 1, 3);
                 StrategyGiver(a, c);
             }
         }
@@ -187,10 +187,30 @@ public class FightGenerator {
             System.out.println("The battle is lost you died guys. :(");
             return b;
         }
-        else {
-            a = 0;
-            b = 0;
-            return 0;
+        return 0;
+    }
+
+    public boolean tryParseInt(String value) {
+        try {
+            Integer.parseInt(value);
+            return true;
+        } catch (NumberFormatException e) {
+            return false;
         }
+    }
+
+    public int tryParse(Scanner sc, int min, int max){
+        String s;
+        int retVal;
+
+        do{
+            s = sc.nextLine();
+            if (tryParseInt(s)){
+                retVal = Integer.parseInt(s);
+                if (min <= retVal && retVal <=  max){
+                    return retVal;
+                }
+            }
+        }while (true);
     }
 }
