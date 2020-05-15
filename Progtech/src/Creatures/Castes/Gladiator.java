@@ -18,9 +18,10 @@ public class Gladiator extends Character {
     //region This constructor is creating a gladiator from the required information
 
 
-    public Gladiator(String name, boolean party_member, boolean alive, int age, Race race, Caste caste, int level) throws InvalidAgeException, InvalidAttributeException {
-        super(name, party_member, alive, age, race, caste, level);
+    public Gladiator(String name, int age, Race race, Caste caste, int level) throws InvalidAgeException, InvalidAttributeException {
+        super(name, age, race, caste, level);
         this.gl = new GladiatorLevel();
+        this.setAlive(true);
         this.getAttributes().setStrength(roll.Rolld6plus12() + getAttributes().getSumm().StrengthModifier(race, age));
         this.getAttributes().setDexterity(roll.Roll2d6plus6() + getAttributes().getSumm().DexterityModifier(race, age));
         this.getAttributes().setQuickness(roll.Roll2d6plus6() + getAttributes().getSumm().QuicknessModifier(race, age));

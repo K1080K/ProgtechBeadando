@@ -18,9 +18,10 @@ public class Headhunter extends Character {
     //region This constructor is creating a headhunter from the required information
 
 
-    public Headhunter(String name, boolean party_member, boolean alive, int age, Race race, Caste caste, int level) throws InvalidAgeException, InvalidAttributeException {
-        super(name, party_member, alive, age, race, caste, level);
+    public Headhunter(String name, int age, Race race, Caste caste, int level) throws InvalidAgeException, InvalidAttributeException {
+        super(name, age, race, caste, level);
         this.hl = new HeadhunterLevel();
+        this.setAlive(true);
         this.getAttributes().setStrength(roll.Roll2d6plus6() + getAttributes().getSumm().StrengthModifier(race, age));
         this.getAttributes().setDexterity(roll.Rolld10plus8() + getAttributes().getSumm().DexterityModifier(race, age));
         this.getAttributes().setQuickness(roll.Rolld6plus12() + getAttributes().getSumm().QuicknessModifier(race, age));

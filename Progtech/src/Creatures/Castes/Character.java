@@ -55,8 +55,8 @@ public abstract class Character extends Creature {
 
     //region Constructor
 
-    public Character(String name, boolean party_member, boolean alive, int age, Race race, Caste caste, int level) throws InvalidAgeException {
-        super(name, party_member, alive);
+    public Character(String name, int age, Race race, Caste caste, int level) throws InvalidAgeException {
+        super(name);
         setAge(age);
         this.race = race;
         this.caste = caste;

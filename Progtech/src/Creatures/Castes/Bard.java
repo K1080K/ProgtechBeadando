@@ -18,9 +18,10 @@ public class Bard extends Character {
     //region This constructor is creating a bard from the required information
 
 
-    public Bard(String name, boolean party_member, boolean alive, int age, Race race, Caste caste, int level) throws InvalidAgeException, InvalidAttributeException {
-        super(name, party_member, alive, age, race, caste, level);
+    public Bard(String name, int age, Race race, Caste caste, int level) throws InvalidAgeException, InvalidAttributeException {
+        super(name, age, race, caste, level);
         this.bl = new BardLevel();
+        this.setAlive(true);
         this.getAttributes().setStrength(roll.Rolld10plus8() + getAttributes().getSumm().StrengthModifier(race, age));
         this.getAttributes().setDexterity(roll.Rolld10plus8() + getAttributes().getSumm().DexterityModifier(race, age));
         this.getAttributes().setQuickness(roll.Rolld10plus8() + getAttributes().getSumm().QuicknessModifier(race, age));

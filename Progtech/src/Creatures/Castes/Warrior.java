@@ -18,9 +18,10 @@ public class Warrior extends Character {
     //region This constructor is creating a warrior from the required information
 
 
-    public Warrior(String name, boolean party_member, boolean alive, int age, Race race, Caste caste, int level) throws InvalidAttributeException, InvalidAgeException {
-        super(name, party_member, alive, age, race, caste, level);
+    public Warrior(String name, int age, Race race, Caste caste, int level) throws InvalidAttributeException, InvalidAgeException {
+        super(name, age, race, caste, level);
         this.wl = new WarriorLevel();
+        this.setAlive(true);
         this.getAttributes().setStrength(roll.Rolld6plus12() + getAttributes().getSumm().StrengthModifier(race, age));
         this.getAttributes().setDexterity(roll.Roll2d6plus6() + getAttributes().getSumm().DexterityModifier(race, age));
         this.getAttributes().setQuickness(roll.Roll2d6plus6() + getAttributes().getSumm().QuicknessModifier(race, age));

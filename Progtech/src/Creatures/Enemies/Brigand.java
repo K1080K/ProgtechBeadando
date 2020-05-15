@@ -6,8 +6,10 @@ public class Brigand extends Bestiary {
 
     DiceRolls roll = new DiceRolls();
 
-    public Brigand(String name, boolean party_member, boolean alive) {
-        super(name, party_member, alive);
+    public Brigand(String name) {
+        super(name);
+        this.setAlive(true);
+        this.setPartyMember(false);
         this.getHealth_andPainResistance().setHealth_points(6);
         this.getHealth_andPainResistance().setActual_health_points(getHealth_andPainResistance().getHealth_points());
         this.getHealth_andPainResistance().setPain_resistance_points(9);

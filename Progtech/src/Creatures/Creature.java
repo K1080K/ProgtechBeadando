@@ -51,10 +51,8 @@ public abstract class Creature implements Comparable {
 
     //region Constructor
 
-    public Creature(String name, boolean party_member, boolean alive) {
+    public Creature(String name) {
         this.name = name;
-        this.party_member = party_member;
-        this.alive = alive;
         this.health_andPainResistance = new Health_andPainResistance(0,0,0,0);
         this.combat_points = new CombatPoints(0,0,0);
         this.info = new InfoPanel();

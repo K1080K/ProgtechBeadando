@@ -13,7 +13,7 @@ public class WarriorTest {
     @Test
     public void TestWarriorAttributes() throws InvalidAgeException, InvalidAttributeException {
         for(int i = 0; i < 100; i++) {
-            Warrior w = new Warrior("Répa", true, true, 51, Race.DWARF, Caste.WARRIOR, 1);
+            Warrior w = new Warrior("Répa",51, Race.DWARF, Caste.WARRIOR, 1);
             assertEquals(true, w.getAlive());
             assertEquals(true, 7 < w.getHealth_andPainResistance().getHealth_points() && w.getHealth_andPainResistance().getHealth_points() < 19);
             assertEquals(true, 7 < w.getAttributes().getWill() && w.getAttributes().getWill() < 19);
